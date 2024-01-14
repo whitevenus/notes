@@ -22,7 +22,7 @@ export default defineConfig({
     sidebar: {
       Frontend: [
         {
-          text: "学习重点",
+          text: "学习笔记",
           items: [
             { text: "网站开发概览", link: "/Frontend/网站开发概览" },
             { text: "CSS核心原理", link: "/Frontend/CSS核心原理" },
@@ -38,7 +38,7 @@ export default defineConfig({
       ],
       Java: [
         {
-          text: "学习重点",
+          text: "学习笔记",
           items: [
             { text: "网站开发概览", link: "/Frontend/网站开发概览" },
             { text: "JavaScript核心篇", link: "/Frontend/JavaScript核心篇" },
