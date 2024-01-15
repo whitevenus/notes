@@ -5,12 +5,13 @@ export default defineConfig({
   base: "/Blog/",
   lang: "zh-CN",
   title: "沙漠之舟",
-  description: "A web site about my study note power on vitepress",
+  description: "一个基于vitepress的CS编程笔记网站",
   head: [["link", { rel: "icon", href: "/Blog/logo.svg" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
+    outline: [2, 6],
     logo: "/public/logo.svg",
+
     nav: [
       { text: "首页", link: "/" },
       { text: "前端手册", link: "/Frontend/" },
@@ -20,7 +21,26 @@ export default defineConfig({
       { text: "项目库", link: "/Project/" },
       // { text: "Examples", link: "/Examples/" },
     ],
-
+    // 设置搜索框的样式
+    search: {
+      provider: "local",
+      options: {
+        translations: {
+          button: {
+            buttonText: "搜索文档",
+            buttonAriaLabel: "搜索文档",
+          },
+          modal: {
+            noResultsText: "无法找到相关结果",
+            resetButtonTitle: "清除查询条件",
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+            },
+          },
+        },
+      },
+    },
     sidebar: {
       Frontend: [
         {
@@ -73,5 +93,9 @@ export default defineConfig({
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/whitevenus" }],
+    footer: {
+      // message: "Released under the MIT License.",
+      copyright: "Copyright © 2024 WhiteVenus",
+    },
   },
 });
