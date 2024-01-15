@@ -2,10 +2,11 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/Blog/",
   lang: "zh-CN",
   title: "沙漠之舟",
   description: "A web site about my study note power on vitepress",
-  head: [["link", { rel: "icon", href: "/public/logo.svg" }]],
+  head: [["link", { rel: "icon", href: "/Blog/logo.svg" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
