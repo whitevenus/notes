@@ -13,10 +13,11 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "前端手册", link: "/Frontend/" },
+      { text: "人工智能", link: "/AI/" },
       // { text: "算法与数据结构", link: "/markdown-examples" },
       { text: "Java手册", link: "/Java/" },
       { text: "项目库", link: "/Project/" },
-      { text: "Examples", link: "/Examples/" },
+      // { text: "Examples", link: "/Examples/" },
     ],
 
     sidebar: {
@@ -34,6 +35,16 @@ export default defineConfig({
         {
           text: "参考资源",
           items: [{ text: "参考资源", link: "/Frontend/参考资源" }],
+        },
+      ],
+      AI: [
+        {
+          text: "学习笔记",
+          items: [{ text: "MetaGPT", link: "/AI/MetaGPT" }],
+        },
+        {
+          text: "参考资源",
+          items: [{ text: "参考资源", link: "/AI/参考资源" }],
         },
       ],
       Java: [
