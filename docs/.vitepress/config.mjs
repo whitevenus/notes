@@ -10,7 +10,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outline: [2, 6],
-    logo: "/public/logo.svg",
+    logo: "/Blog/logo.svg",
 
     nav: [
       { text: "首页", link: "/" },
