@@ -14,7 +14,7 @@
 
 - [ImageNet](https://www.image-net.org/)是当时计算机视觉领域最大的一个图像数据集，最初大概包含 100 万张，1000 多个类别的各种各样的图像.
 
-  ![ImageNet](/docs/AI/images/paper/alexnet/imageNet.jpg)
+  <!-- ![ImageNet](/docs/AI/images/paper/alexnet/imageNet.jpg) -->
 
 - `Deep Convolutional Neural Networks`
 
