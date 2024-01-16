@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 关于我
-      link: /markdown-examples
+      link: /about
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples

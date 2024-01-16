@@ -11,7 +11,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     outline: [2, 6],
     logo: "/logo.svg",
-
+    // 头部的导航栏
     nav: [
       { text: "首页", link: "/" },
       { text: "前端手册", link: "/Frontend/" },
@@ -61,7 +61,10 @@ export default defineConfig({
       AI: [
         {
           text: "学习笔记",
-          items: [{ text: "MetaGPT", link: "/AI/MetaGPT" }],
+          items: [
+            { text: "论文精读", link: "/AI/论文精读" },
+            { text: "MetaGPT", link: "/AI/MetaGPT" },
+          ],
         },
         {
           text: "参考资源",
@@ -92,10 +95,16 @@ export default defineConfig({
       ],
     },
 
+    // 右上角社交链接
     socialLinks: [{ icon: "github", link: "https://github.com/whitevenus" }],
+    // 非文档页的页脚显示
     footer: {
       // message: "Released under the MIT License.",
       copyright: "Copyright © 2024 WhiteVenus",
     },
+  },
+  // 开启数学公式
+  markdown: {
+    math: true,
   },
 });
