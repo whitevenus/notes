@@ -11,7 +11,7 @@ hero:
     alt: 背景图
   actions:
     - theme: brand
-      text: 关于我
+      text: 关于本站
       link: /about
     # - theme: alt
     #   text: API Examples

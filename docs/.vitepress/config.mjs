@@ -24,22 +24,22 @@ export default defineConfig({
     // 设置搜索框的样式
     search: {
       provider: "local",
-      options: {
-        translations: {
-          button: {
-            buttonText: "搜索文档",
-            buttonAriaLabel: "搜索文档",
-          },
-          modal: {
-            noResultsText: "无法找到相关结果",
-            resetButtonTitle: "清除查询条件",
-            footer: {
-              selectText: "选择",
-              navigateText: "切换",
-            },
-          },
-        },
-      },
+      // options: {
+      //   translations: {
+      //     button: {
+      //       buttonText: "搜索文档",
+      //       buttonAriaLabel: "搜索文档",
+      //     },
+      //     modal: {
+      //       noResultsText: "无法找到相关结果",
+      //       resetButtonTitle: "清除查询条件",
+      //       footer: {
+      //         selectText: "选择",
+      //         navigateText: "切换",
+      //       },
+      //     },
+      //   },
+      // },
     },
     sidebar: {
       Frontend: [
@@ -75,13 +75,13 @@ export default defineConfig({
         {
           text: "学习笔记",
           items: [
-            { text: "网站开发概览", link: "/Frontend/网站开发概览" },
-            { text: "JavaScript核心篇", link: "/Frontend/JavaScript核心篇" },
+            { text: "Maven基础篇", link: "/Java/maven基础篇" },
+            { text: "Spring基础", link: "/Java/spring基础" },
           ],
         },
         {
           text: "参考资源",
-          items: [{ text: "参考资源", link: "/Frontend/参考资源" }],
+          items: [{ text: "参考资源", link: "/Java/参考资源" }],
         },
       ],
       Examples: [

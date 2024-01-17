@@ -46,3 +46,32 @@
 
 :::
 
+## 3、基本环境的安装和配置
+
++ 检查本机系统环境是否安装了`python 3.9+`：
+
+  ```bash
+  python --version
+  ```
+
++ 获取MetaGPT（更多安装方式见[MetaGPT官方文档](https://docs.deepwisdom.ai/main/zh/guide/get_started/installation.html)）
+
+  ```bash
+  pip install metagpt # 获取稳定版MetaGPT 
+  pip install -i https://pypi.tuna.tsinghua.edu.cn/simple metagpt==0.5.2 # 推荐
+  ```
+
++ 配置MetaGPT（详细请查看[MetaGPT官方文档](https://docs.deepwisdom.ai/main/zh/guide/get_started/setup.html)）
+
++ 
+
+  
+
+
+
+
+
+
+
+
+
