@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/Blog/",
+  base: "/notes/",
   lang: "zh-CN",
   title: "沙漠之舟",
   description: "一个基于vitepress的CS编程笔记网站",
