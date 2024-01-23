@@ -274,6 +274,20 @@ List( {space: 8 }) {
 
 ## 动画
 
+### [属性动画](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V2/ts-animatorproperty-0000001478181445-V2)
+
+当组件的某些通用属性发生变化时，通过设置组件的`animation`属性自动实现组件的渐变过渡效果。支持的属性有：`width`、`height`、`backgroundColor`、`opacity`、`scale`、`rotate`、`translate`等等。想要组件随某个属性值的变化而产生动画，此属性需要加在`animation`属性之前。有的属性变化不希望通过`animation`产生属性动画，可以放在`animation`之后。
+
+### [显示动画](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V2/ts-explicit-animation-0000001478341181-V2)
+
+显示动画通过全局`animateTo`函数修改组件属性，实现属性变化时的渐变过渡效果。其需要把执行动画的属性的修改放在闭包函数中出发动画。这种方式更为灵活。
+
+### [组件转场动画](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V2/ts-transition-animation-component-0000001427902496-V2)
+
+组件转场动画是在组件插入或移除时的过渡动画，通过组件的`transition`属性配置转场参数。组件转场动画需要结合`animateTo`函数一起使用。
+
+
+
 
 
 

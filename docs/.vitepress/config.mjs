@@ -6,7 +6,7 @@ export default defineConfig({
   lang: "zh-CN",
   title: "沙漠之舟",
   description: "一个基于vitepress的CS编程笔记网站",
-  head: [["link", { rel: "icon", href: "/Blog/logo.svg" }]],
+  head: [["link", { rel: "icon", href: "/notes/logo.svg" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outline: [2, 6],
