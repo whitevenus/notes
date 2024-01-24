@@ -286,7 +286,13 @@ List( {space: 8 }) {
 
 组件转场动画是在组件插入或移除时的过渡动画，通过组件的`transition`属性配置转场参数。组件转场动画需要结合`animateTo`函数一起使用。
 
+## 应用模型：Stage模型
 
+![Stage模型1](./images/HarmonyOS/Stage模型1.png)
+
+![Stage模型2](./images/HarmonyOS/Stage模型2.png)
+
+![Stage模型3](./images/HarmonyOS/Stage模型3.png)
 
 
 
