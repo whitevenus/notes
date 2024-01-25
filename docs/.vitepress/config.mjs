@@ -77,6 +77,7 @@ export default defineConfig({
           items: [
             { text: "回顾TypeScript", link: "/HarmonyOS/TypeScript回顾" },
             { text: "HarmonyOS入门", link: "/HarmonyOS/HarmonyOS入门" },
+            { text: "APP", link: "/HarmonyOS/APP" },
           ],
         },
         {
