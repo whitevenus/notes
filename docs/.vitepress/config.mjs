@@ -76,7 +76,8 @@ export default defineConfig({
           text: "学习笔记",
           items: [
             { text: "回顾TypeScript", link: "/HarmonyOS/TypeScript回顾" },
-            { text: "HarmonyOS入门", link: "/HarmonyOS/HarmonyOS入门" },
+            { text: "HarmonyOS入门1", link: "/HarmonyOS/HarmonyOS入门1" },
+            { text: "HarmonyOS入门2", link: "/HarmonyOS/HarmonyOS入门2" },
             { text: "APP", link: "/HarmonyOS/APP" },
           ],
         },
