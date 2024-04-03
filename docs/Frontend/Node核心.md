@@ -1,6 +1,6 @@
-##  1、Node的幕后
+## Node的幕后
 
-### 1.1、Node架构
+### Node架构
 
 `Node`在运行时有两个非常重要的依赖：`V8`引擎、`libuv`，V8负责将`javascript`代码转换为计算机可以理解执行的机器语言。`libuv`是一个重点关注**异步IO**的开源库，它使得Node能够访问计算机底层的操作系统、文件系统、网络等等，除此以外，`libuv`为`Node`提供了两个重要的特征：**事件循环**、**线程池**。
 
@@ -11,7 +11,7 @@
 
 ![Node架构](./images/node/Node架构.png)
 
-### 1.2、线程和线程池
+### 线程和线程池
 
 Node进程（正在执行的一个程序）在计算机上是以单线程（可以想象成一个串行的指令序列）的方式运行的。Node运行的过程大致如下：
 
@@ -90,7 +90,7 @@ Hello from the top-level code
 */
 ```
 
-### 1.3、事件循环
+### 事件循环
 
 事件循环作为`Node`中最核心的架构，所有的非顶层代码（所有的回调函数）都会执行在事件循环中。尽管某些复杂的任务（例如与文件系统相关的任务）会被交到线程池中运行，但这实际上也是由事件循环所负责的。`Node`是围绕着回调函数而构建的，也就是说Node是基于事件驱动的架构。
 
@@ -118,7 +118,7 @@ Hello from the top-level code
 
 虽然现在有很多新的方法（例如**引入子进程**等）可以避免线程阻塞的问题，但是遵循上面的建议对初学者来说非常重要。
 
-### 1.4、事件驱动架构
+### 事件驱动架构
 
 `Node`中的很多模块（例如HTTP、文件系统、计时器）都是基于事件驱动构建的，事实上我们也可以使用这种架构去写代码。在Node中，有一些发出命名事件的事件发射器对象，一旦应用程序中发生了重要事件（例如HTTP请求、定时器等等），事件侦听器就可以捕获到这些事件，并调用附加在`Event listener`上的回调函数来发出事件。
 
@@ -222,7 +222,7 @@ Another request 😄
 */
 ```
 
-### 1.5、Streams
+### Streams
 
 通过流`Streams`，可以实现一块一块（`chunks`）地读取数据，而不用一次性读取完整的数据，这样就不需要将所有的数据都存入内存中了，是一种节省内存空间的读取数据方式。流的方式非常适合处理大的数据，例如视频等。
 
@@ -297,7 +297,7 @@ server.listen(8000, "127.0.0.1", () => {
 
 ```
 
-### 1.6、Node模块的实际工作方式
+### Node模块的实际工作方式
 
 在`Node`模块系统中，每一个`JavaScript`文件都被视作一个单独的模块。Node使用`CommonJS`模块系统（包括`require`、`exports`、`modules.exports`）导入导出模块，这在服务器上表现不错。除了`CommonJS`模块系统，现在还有原生的`ES`模块系统（包含`import`和`export`）。
 
@@ -338,7 +338,7 @@ console.log(require("module").wrapper);
 
 完成上述步骤以后，实际上还会将模块缓存起来，若是之后再导入则会直接从缓存中进行检索。
 
-## 2、解决回调地狱
+## 解决回调地狱
 
 ```javascript
 const fs = require("fs");
@@ -364,7 +364,7 @@ fs.readFile(`${__dirname}/dog.txt`, (err, data) => {
 
 以上是一个典型的回调地狱问题，当内层嵌套过多的回调函数会使代码变得非常难以阅读。
 
-### 2.1、使用Promise解决
+### 使用Promise解决
 
 ```javascript
 const fs = require("fs");
@@ -408,7 +408,7 @@ readFilePro(`${__dirname}/dog.txt`)
 
 使用`Promise`可以解决回调函数多层嵌套的问题，这使得代码可读性得到了极大的增强，并且更加容易理解。
 
-### 2.2、使用async/await解决
+### 使用async/await解决
 
 ```javascript
 const fs = require("fs");
@@ -472,13 +472,13 @@ const getDogImg = async () => {
 
 使用`async/await`使得我们的代码看起来更像是同步代码，不需要再写大量的回调函数，这让代码显得更为优雅。
 
-## 3、Express是什么？
+## Express是什么？
 
 `Express`是一个非常流行的最小`node.js`框架，这意味着它是运行在`node.js`之上的一层高级抽象。事实上，`Express`是用`node.js`完成编写的。
 
 `Express`包含非常强大有用的功能集，例如：复杂的路由、更简单地处理请求和响应、服务端渲染、中间件等等。这使得开发`node.js`应用程序变得非常简单快速，因为使用`Express`意味着我们不需要重新发明轮子。另外`Express`让我们更容易地以MVC架构组织代码。
 
-### 3.1、使用Express构建简易Web服务器
+### 使用Express构建简易Web服务器
 
 ```javascript
 const express = require("express");
@@ -513,7 +513,7 @@ app.post("/", (req, res) => {
 });
 ```
 
-### 3.2 REST API
+### REST API
 
 `API（Application Programming Interface）`指得是一个软件的一部分被另一个软件使用，目的是达成应用程序之间互相通信。例如`Web API`：服务端通过API提供数据给客户端使用。当然除了WebAPI以外，还有其他类型的API，例如`node.js`中的`fs`和`http`模块提供了非常多的API供开发人员使用，`DOM API`提供非常多的API供开发人员操作`DOM`等等。
 
@@ -655,7 +655,7 @@ app.listen(port, () => {
 });
 ```
 
-### 3.3 请求响应周期
+### 请求响应周期
 
 `Express`应用程序在客户端访问服务器时收到请求，之后会创建一个请求对象和一个响应对象，经过一系列处理步骤以后将响应对象返回给客户端。为了更好的处理数据，`Express`使用一种称为`Middleware`（中间件）的东西。他可以操纵请求或响应对象，或者执行任何我们自己的代码。例如`app.use(express.json())`可以格式化请求正文，除此以外中间件可以做很多事情，例如**记录日志信息**、**设置响应头格式**、**路由**等等。
 
@@ -670,7 +670,7 @@ app.use((req, res, next) => {
 });
 ```
 
-## 4、MongoDB
+## MongoDB
 
 [`MongoDB`](https://www.mongodb.com/zh-cn)是一个**NoSQL**数据库，**MongoDB**数据库包含很多**集合**（可以类比做传统数据库中的表），每一个集合包含一个或多个**文档**（就像是传统数据库表中的一条记录），也就是说一个文档是关于一个单一实体的信息集合。集合和文档的对应关系举例：
 
@@ -682,7 +682,7 @@ app.use((req, res, next) => {
 
 ![文档数据记录](./images/node/文档数据记录.png)
 
-### 4.1、启动数据库并连接
+### 启动数据库并连接
 
 ```shell
 # 启动命令
@@ -692,7 +692,7 @@ mongod --dbpath=/Users/muwentao/data/db
 mongosh
 ```
 
-### 4.2、创建数据库
+### 创建数据库
 
 ```bash
 # 该命令用于切换数据库环境，若是指定数据库不存在则会在首次存储数据到指定数据库时创建数据库
@@ -701,7 +701,7 @@ use myNewDB
 db.tours.insertOne({ x: 1} )
 ```
 
-### 4.3、查询数据库及数据库中的集合
+### 查询数据库及数据库中的集合
 
 ```shell
 # 该命令用于查询数据库
@@ -711,7 +711,7 @@ show dbs
 show colloections
 ```
 
-### 4.4、查询数据
+### 查询数据
 
 ```shell
 # 该命令查询当前数据库中tours集合中的所有数据
@@ -733,7 +733,7 @@ db.tours.find({ $or: [{price: {$lt: 500}}, {rating: {$gte: 4.8}}]})
 db.tours.find({ $or: [{price: {$lt: 500}}, {rating: {$gte: 4.8}}]}, {name: 1})
 ```
 
-### 4.5、更新数据
+### 更新数据
 
 ```bash
 # 该命令更新tours集合中name字段值为The Snow Adventurer记录的price字段值为598
@@ -743,7 +743,7 @@ db.tours.updateOne({ name: "The Snow Adventurer" }, { $set: { price: 598 } })
 db.tours.updateOne({ price: {$gt: 500}, rating: {$gte: 4.8} }, {$set: {premium: true}})
 ```
 
-### 4.6、删除数据
+### 删除数据
 
 ```bash
 # 该命令删除tours集合中rating字段值小于4.8的记录
@@ -755,7 +755,7 @@ db.tours.deleteMany({})
 
 通常`deleteOne`用于删除一条记录，`updateMany`用于删除多条记录。类似`insertOne`、`insertMany`、`updateOne`、`updateMany`同理。
 
-### 4.7、Mongoose
+### Mongoose
 
 `Mongoose`是`node.js`和`MongoDB`之间的一个对象数据模型（`Object Data Modeling`）库，我们可以使用`MongoDB`驱动库编写javascript连接数据库，也可以使用`Mongoose`这个更高一层的抽象库。因为它提供了很多开箱即用的工具，允许更快、更简单的开发应用程序。它的特征如下：
 
@@ -819,7 +819,7 @@ app.listen(port, () => {
 });
 ```
 
-## 5、错误处理
+## 错误处理
 
 通常错误包含两类：**操作错误**和**编程错误**。
 
@@ -829,7 +829,7 @@ app.listen(port, () => {
 
 通常开发人员讲的错误处理都是指如何处理**操作错误**这一类型的错误，将处理这些错误的代码与具体逻辑代码相分离可以保证代码的干净整洁。
 
-## 6、JWT
+## JWT
 
 `JSON WEB TOKEN`（JWT）是一个用于身份验证的无状态解决方案，这就无需在服务器上存储任何`Session`状态。`JWT`是如何工作的呢？
 
@@ -843,7 +843,7 @@ app.listen(port, () => {
 
 ![JWT验证机制](./images/node/JWT验证机制.png)
 
-## 7、安全
+## 安全
 
 常见的安全性问题：
 
