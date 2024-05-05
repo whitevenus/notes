@@ -49,8 +49,15 @@ export default defineConfig({
             { text: "网站开发概览", link: "/Frontend/网站开发概览" },
             { text: "CSS核心原理", link: "/Frontend/CSS核心原理" },
             { text: "JavaScript核心篇", link: "/Frontend/JavaScript核心篇" },
+            { text: "ES6快速精通", link: "/Frontend/学习/ES6快速精通" },
             { text: "Node.js入门篇", link: "/Frontend/Node入门" },
             { text: "Node.js核心篇", link: "/Frontend/Node核心" },
+          ],
+        },
+        {
+          text: "面试题",
+          items: [
+            { text: "HTML基础面试题", link: "/Frontend/面试/HTML基础面试题" },
           ],
         },
         {
