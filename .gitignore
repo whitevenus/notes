@@ -6,3 +6,4 @@ dist-ssr
 .temp
 *.local
 .DS_Store
+.idea
