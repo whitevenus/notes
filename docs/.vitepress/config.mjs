@@ -14,6 +14,7 @@ export default defineConfig({
     // 头部的导航栏
     nav: [
       { text: "首页", link: "/" },
+      { text: '八股文', link: "/Interview" },
       { text: "前端手册", link: "/Frontend/" },
       { text: "人工智能", link: "/AI/" },
       { text: "鸿蒙开发", link: "/HarmonyOS/" },
@@ -42,6 +43,14 @@ export default defineConfig({
       // },
     },
     sidebar: {
+      Interview: [
+        {
+          text: '计算机网络',
+          items: [
+            { text: '介绍一下TCP/IP模型和OSI模型的区别', link: "/Interview/index" }
+          ]
+        }
+      ],
       Frontend: [
         {
           text: "学习笔记",
