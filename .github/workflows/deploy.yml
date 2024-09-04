@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
 
-# 设置tokenn访问权限
+# 设置token访问权限
 permissions:
   contents: read
   pages: write
@@ -38,7 +38,7 @@ jobs:
 
       - name: Build with VitePress
         run: npm run docs:build
-          touch .nojekyll # 通知githubpages不要使用Jekyll处理这个站点，不知道为啥不生效，就手动搞了
+          touch .nojekyll # 通知githubPages不要使用Jekyll处理这个站点，不知道为啥不生效，就手动搞了
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2 # 上传构建产物
         with:
